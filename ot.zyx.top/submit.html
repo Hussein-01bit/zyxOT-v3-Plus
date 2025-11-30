@@ -1,0 +1,335 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>投食 - 在线加密系统</title>
+
+	<script type="text/javascript">
+		uojHome = ''; // 'https://sjzezoj.com/';
+	</script>
+
+	<!-- Bootstrap 5 (CSS) -->
+	<link rel="stylesheet" href="https://sjzezoj.com/css/bootstrap.min.css?v=5.3.0-alpha3" />	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://sjzezoj.com/css/bootstrap-icons.min.css?v=2022.9.23" />
+	<!-- Custom styles for this template -->
+	<link rel="stylesheet" href="https://sjzezoj.com/css/uoj-bs5.css?v=d627490" />
+	<!-- jQuery (necessary for Bootstrap\'s JavaScript plugins) -->
+	<script src="https://sjzezoj.com/js/jquery.min.js"></script>
+	<!-- jQuery autosize -->
+	<script src="https://sjzezoj.com/js/jquery.autosize.min.js"></script>	<script type="text/javascript">
+		$(document).ready(function() {
+			$('textarea:not([data-no-autosize])').autosize();
+		});
+	</script>
+
+	<!-- jQuery cookie -->
+	<script src="https://sjzezoj.com/js/jquery.cookie.min.js"></script>
+	<!-- Bootstrap 5: JavaScript -->
+	<script src="https://sjzezoj.com/js/bootstrap.bundle.min.js?v=5.3.0-alpha3"></script>
+	<!-- Color converter -->
+	<script src="https://sjzezoj.com/js/color-converter.min.js"></script>
+	<!-- Clipboard Polyfill -->
+	<script src="https://sjzezoj.com/js/clipboard-polyfill.overwrite-globals.es5.min.js"></script>
+	<!-- uoj -->
+	<script src="https://sjzezoj.com/js/uoj.js?v=d627490"></script>
+	<!-- readmore -->
+	<script src="https://sjzezoj.com/js/readmore/readmore.min.js"></script>
+	<!-- LAB -->
+	<script src="https://sjzezoj.com/js/LAB.min.js"></script>
+<!-- md5 -->
+<script type="text/javascript" src="https://sjzezoj.com/js/md5.min.js"></script>
+<!-- DB -->
+<script type="text/javascript" src="js/DB.js"></script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	<script type="text/javascript">
+		before_window_unload_message = null;
+		$(window).on('beforeunload', function() {
+			if (before_window_unload_message !== null) {
+				return before_window_unload_message;
+			}
+		});
+	</script>
+
+	<script async data-domain="sjzezoj.com" src="https://stat.u.sb/js/script.js"></script>
+	<script>
+		window.plausible = window.plausible || function() {
+			(window.plausible.q = window.plausible.q || []).push(arguments)
+		}
+	</script>
+	<script>
+		plausible('Domain', {
+			props: {
+				domain: window.location.host,
+			},
+		});
+	</script>
+</head>
+
+<body class="d-flex flex-column min-vh-100
+			bg-body-tertiary
+			">
+			<div class="navbar navbar-light navbar-expand-md bg-body shadow-sm
+mb-4
+" role="navigation">
+	<div class="container">
+		<a class="navbar-brand fw-normal" href="../ot.zyx.top.html">
+			zyxOT		</a>
+
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="nav navbar-nav mr-auto" id="navbarSupportedContent-dock">
+				<li class="nav-item">
+					<a class="nav-link" href="../ot.zyx.top/main.html">
+						<i class="bi bi-card-list"></i>
+						加密					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../ot.zyx.top/submit.html">
+						<i class="bi bi-pencil-square"></i>
+						投食					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../ot.zyx.top/faq.html">
+						<i class="bi bi-question-circle"></i>
+						帮助					</a>
+				</li>
+			</ul>
+
+			<hr class="d-md-none text-muted">
+
+			<ul class="nav navbar-nav ms-md-auto">
+	<li class="nav-item dropdown">
+		<button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+			<i class="bi bi-circle-half theme-icon-active" data-icon="bi-circle-half"></i>
+			<span class="d-md-none">&nbsp;切换主题</span>
+		</button>
+		<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 6rem;">
+			<li>
+				<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto">
+					<i class="bi bi-circle-half me-2 opacity-50 theme-icon" data-icon="bi-circle-half"></i>
+					系统
+				</button>
+			</li>
+			<li>
+				<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+					<i class="bi bi-sun-fill me-2 opacity-50 theme-icon" data-icon="bi-sun-fill"></i>
+					亮色
+				</button>
+			</li>
+			<li>
+				<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+					<i class="bi bi-moon-stars-fill me-2 opacity-50 theme-icon" data-icon="bi-moon-stars-fill"></i>
+					暗色
+				</button>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-item dropdown">
+		<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			<i class="bi bi-translate"></i>
+			中文		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a class="dropdown-item" href="?locale=zh-cn">
+					中文
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-item dropdown">
+		<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="uoj_username_a">
+			<span id="uoj_username_page"></span> 						</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a class="dropdown-item" id="my_chat">个人信息</a>
+			</li>
+		</ul>
+	</li>
+					<li id="login" class="nav-item" role="presentation"><a class="nav-link" href="../ot.zyx.top/login.html">
+				<i class="bi bi-box-arrow-in-right"></i>
+				登录			</a>
+					<li id="logout" class="nav-item" role="presentation"><a class="nav-link" href="../ot.zyx.top/logout.html"><i class="bi bi-box-arrow-right"></i> 登出</a></li>
+								</ul><script type="text/javascript">
+							var uoj_username = localStorage.getItem("zyxOT-v3-username");
+							if (localStorage.getItem("zyxOT-v3-username") != null && localStorage.getItem("zyxOT-v3-user=" + localStorage.getItem("zyxOT-v3-username") + "?banned") == 1) {
+
+	uoj_username = null;
+}
+							if (uoj_username != null) {
+								document.querySelector("#uoj_username_page").innerHTML = uoj_username;
+								document.querySelector("#my_chat").href = "../ot.zyx.top/user.html?" + uoj_username;
+								document.querySelector("#login").remove();
+							}
+							else {
+								document.querySelector("#uoj_username_a").remove();
+								document.querySelector("#logout").remove();
+							}
+						</script>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+<script>
+	var zan_link = '';
+</script>
+	
+	<div class="uoj-content container flex-fill">
+
+<div class="tab-pane active" id="tab-goto">
+	<h1>
+	投食</h1>
+	<style>
+		#go_to_password, #go_to_text {
+			font-family: Menlo, Cascadia Mono, Ubuntu Mono, Roboto Mono, Jetbrains Mono, Fira Code, Consolas, '思源黑体 Regular', '思源宋体 Light', '宋体', 'Courier New', monospace;
+			width: 100%;
+		}
+	</style>
+	<div class="card card-default" id="tification">
+			<div class="card-body">
+		<div class="row">
+			<div id="div-toushiname" class="col-sm-12">
+				<label>算法名称</label>
+				<input type="text" class="form-control" id="input-toushiname" name="toushiname">
+			</div>
+		</div>
+		<div id="div-toushiname">
+			<label>加密代码 (JavaScript，请实现 <code>get_ans1()</code> 函数)</label>
+			<textarea class="form-control" id="go_to_password">// 其他必需函数
+
+function get_ans1(s) {
+	let ans = '';
+	// 主要代码
+	return ans;
+}</textarea>
+		</div>
+		<div id="div-toushiname">
+			<label>解密代码 (JavaScript，请实现 <code>get_ans2()</code> 函数)</label>
+			<textarea class="form-control" id="go_to_text">// 其他必需函数
+
+function get_ans2(s) {
+	let ans = '';
+	// 主要代码
+	return ans;
+}</textarea>
+		</div>
+	</div>
+			<div class="card-footer bg-transparent">
+				<div class="row">
+					<div class="col-sm-6" style="text-align: left;">
+						<button type="submit" onclick="submit();" class="btn btn-primary">提交</button>
+					</div>
+					<div class="col-sm-6" style="text-align: right;">
+						<a href="faq.html#submit" target="_blank">使用教程</a>
+					</div>
+				</div>
+			</div>
+</div>
+<script>
+	function submit() {
+		if (localStorage.getItem("zyxOT-v3-user=" + localStorage.getItem("zyxOT-v3-username") + "?muted") == "true") {
+			alert("好像哪里有点问题\n您已被禁言");
+			return;
+		}
+		if (!confirm("确认提交吗？提交后将会等待审核。"))
+			return;
+		let this_id = localStorage.getItem("zyxOT-v3-toushi?id");
+		this_id++;
+		localStorage.setItem("zyxOT-v3-toushi?id", this_id);
+		let text1 = '';
+		for (let i = 0; i < document.querySelector('#go_to_password').value.length; i++) 
+			if (document.querySelector('#go_to_password').value[i] == '<') 
+				text1 += '&lt;';
+			else 
+				text1 += document.querySelector('#go_to_password').value[i];
+		let text2 = '';
+		for (let i = 0; i < document.querySelector('#go_to_text').value.length; i++) 
+			if (document.querySelector('#go_to_text').value[i] == '<') 
+				text2 += '&lt;';
+			else 
+				text2 += document.querySelector('#go_to_text').value[i];
+		localStorage.setItem('zyxOT-v3-toushi?id=' + this_id, document.querySelector('#input-toushiname').value);
+		localStorage.setItem('zyxOT-v3-toushi?id=' + this_id + '&user', localStorage.getItem("zyxOT-v3-username"));
+		localStorage.setItem('zyxOT-v3-toushi?id=' + this_id + '&encrypt', text1);
+		localStorage.setItem('zyxOT-v3-toushi?id=' + this_id + '&decrypt', text2);
+		location.href = "";
+	}
+</script>
+<div class="mt-2 alert alert-danger">
+				<p>只允许通过读写计算机的输入/输出端口以及对指定库函数的调用等方式与外部环境通信。在程序中严禁下列操作：</p>
+				<ul>
+<li>试图访问网络</li>
+<li>使用fork、exec、system或其它线程/进程生成函数</li>
+<li>打开任何文件和目录</li>
+<li>运行其它程序</li>
+<li>改变文件系统的访问权限</li>
+<li>读写文件系统的管理信息</li>
+<li>使用除读写规定的输入/输出文件之外的其它系统调用</li>
+<li>捕获和处理鼠标和键盘的输入消息</li>
+<li>试图无限递归创建子进程</li>
+<li>除程序调用abort的异常终止外，程序返回值必须是0</li>
+</ul>
+<p>如果违规，本加密系统将会拒绝投食，如果是网页版则账号将会被永久封禁，如果是本地版将立即启动自毁程序。</p>
+			</div>
+</div>
+
+
+	<script>
+	if (localStorage.getItem("zyxOT-v3-username") == null && localStorage.getItem("zyxOT-v3-guest-toushi") != "true") {
+		document.querySelector("title").innerHTML = "403 - 在线加密系统";
+		document.querySelector(".uoj-content").innerHTML = '<div class="text-center"><div style="font-size:233px">403</div><p>禁止入内！ T_T</p></div>			';
+	}
+	else if (localStorage.getItem("zyxOT-v3-username") != null && localStorage.getItem("zyxOT-v3-user=" + localStorage.getItem("zyxOT-v3-username") + "?manage") != 1 && localStorage.getItem("zyxOT-v3-default-toushi") != "true") {
+		document.querySelector("title").innerHTML = "403 - 在线加密系统";
+		document.querySelector(".uoj-content").innerHTML = '<div class="text-center"><div style="font-size:233px">403</div><p>禁止入内！ T_T</p></div>			';
+	}
+	</script>
+</div>
+	<footer class="bg-body text-muted pt-3 pb-4 mt-4" style="font-size: 0.9em">
+		<div class="container d-lg-flex justify-content-lg-between">
+			<div>
+				<div>
+					&copy; 2025					<a class="text-decoration-none" href="../ot.zyx.top.html">zyxOT</a>
+				</div>
+				<div class="small mt-1" id="web-time">
+					服务器时间: 2025-08-23 14:00:45				</div>
+			</div>
+			<div class="mt-2 mt-lg-0">
+				Based on <a class="text-decoration-none" href="https://uoj.ac" target="_blank">UOJ</a> &
+				<a class="text-decoration-none" href="https://sjzezoj.com" target="_blank">S2OJ</a>,
+				modified by <a class="text-decoration-none" href="../ot.zyx.top/user.html?zyx2012" target="_blank">zyx2012</a> & <a class="text-decoration-none" href="../ot.zyx.top/user.html?Hussein" target="_blank">Hussein</a>
+				for <a class="text-decoration-none" href="../ot.zyx.top.html" target="_blank">zyxOT</a>
+			</div>
+		</div>
+		<script src="../ot.zyx.top/js/system.js"></script>
+	</footer>
+</div>
+<!-- /container -->
+</body>
+
+</html>

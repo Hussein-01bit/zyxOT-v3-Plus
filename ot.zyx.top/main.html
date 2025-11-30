@@ -1,0 +1,842 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+		<title>加密解密 - 在线加密系统</title>
+
+	<script type="text/javascript">
+		uojHome = ''; // 'https://sjzezoj.com/';
+	</script>
+
+	<!-- Bootstrap 5 (CSS) -->
+	<link rel="stylesheet" href="https://sjzezoj.com/css/bootstrap.min.css?v=5.3.0-alpha3" />	<!-- Bootstrap Icons -->
+	<link rel="stylesheet" href="https://sjzezoj.com/css/bootstrap-icons.min.css?v=2022.9.23" />
+	<!-- Custom styles for this template -->
+	<link rel="stylesheet" href="https://sjzezoj.com/css/uoj-bs5.css?v=d627490" />
+	<!-- jQuery (necessary for Bootstrap\'s JavaScript plugins) -->
+	<script src="https://sjzezoj.com/js/jquery.min.js"></script>
+	<!-- jQuery autosize -->
+	<script src="https://sjzezoj.com/js/jquery.autosize.min.js"></script>	<script type="text/javascript">
+		$(document).ready(function() {
+			$('textarea:not([data-no-autosize])').autosize();
+		});
+	</script>
+
+	<!-- jQuery cookie -->
+	<script src="https://sjzezoj.com/js/jquery.cookie.min.js"></script>
+	<!-- Bootstrap 5: JavaScript -->
+	<script src="https://sjzezoj.com/js/bootstrap.bundle.min.js?v=5.3.0-alpha3"></script>
+	<!-- Color converter -->
+	<script src="https://sjzezoj.com/js/color-converter.min.js"></script>
+	<!-- Clipboard Polyfill -->
+	<script src="https://sjzezoj.com/js/clipboard-polyfill.overwrite-globals.es5.min.js"></script>
+	<!-- uoj -->
+	<script src="https://sjzezoj.com/js/uoj.js?v=d627490"></script>
+	<!-- readmore -->
+	<script src="https://sjzezoj.com/js/readmore/readmore.min.js"></script>
+	<!-- LAB -->
+	<script src="https://sjzezoj.com/js/LAB.min.js"></script>
+<!-- md5 -->
+<script type="text/javascript" src="https://sjzezoj.com/js/md5.min.js"></script>
+<!-- DB -->
+<script type="text/javascript" src="js/DB.js"></script>
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	
+	<!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
+	<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+		<![endif]-->
+
+	<script type="text/javascript">
+		before_window_unload_message = null;
+		$(window).on('beforeunload', function() {
+			if (before_window_unload_message !== null) {
+				return before_window_unload_message;
+			}
+		});
+	</script>
+
+	<script async data-domain="sjzezoj.com" src="https://stat.u.sb/js/script.js"></script>
+	<script>
+		window.plausible = window.plausible || function() {
+			(window.plausible.q = window.plausible.q || []).push(arguments)
+		}
+	</script>
+	<script>
+		plausible('Domain', {
+			props: {
+				domain: window.location.host,
+			},
+		});
+	</script>
+</head>
+
+<body class="d-flex flex-column min-vh-100
+			bg-body-tertiary
+			">
+			<div class="navbar navbar-light navbar-expand-md bg-body shadow-sm
+mb-4
+" role="navigation">
+	<div class="container">
+		<a class="navbar-brand fw-normal" href="../ot.zyx.top.html">
+			zyxOT		</a>
+
+		<button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+			<span class="navbar-toggler-icon"></span>
+		</button>
+
+		<div class="collapse navbar-collapse" id="navbarSupportedContent">
+			<ul class="nav navbar-nav mr-auto" id="navbarSupportedContent-dock">
+				<li class="nav-item">
+					<a class="nav-link" href="../ot.zyx.top/main.html">
+						<i class="bi bi-card-list"></i>
+						加密					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../ot.zyx.top/submit.html">
+						<i class="bi bi-pencil-square"></i>
+						投食					</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="../ot.zyx.top/faq.html">
+						<i class="bi bi-question-circle"></i>
+						帮助					</a>
+				</li>
+			</ul>
+
+			<hr class="d-md-none text-muted">
+
+			<ul class="nav navbar-nav ms-md-auto">
+	<li class="nav-item dropdown">
+		<button class="btn btn-link nav-link py-2 px-0 px-lg-2 dropdown-toggle d-flex align-items-center" id="bd-theme" type="button" aria-expanded="false" data-bs-toggle="dropdown" data-bs-display="static">
+			<i class="bi bi-circle-half theme-icon-active" data-icon="bi-circle-half"></i>
+			<span class="d-md-none">&nbsp;切换主题</span>
+		</button>
+		<ul class="dropdown-menu dropdown-menu-end" aria-labelledby="bd-theme" style="--bs-dropdown-min-width: 6rem;">
+			<li>
+				<button type="button" class="dropdown-item d-flex align-items-center active" data-bs-theme-value="auto">
+					<i class="bi bi-circle-half me-2 opacity-50 theme-icon" data-icon="bi-circle-half"></i>
+					系统
+				</button>
+			</li>
+			<li>
+				<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="light">
+					<i class="bi bi-sun-fill me-2 opacity-50 theme-icon" data-icon="bi-sun-fill"></i>
+					亮色
+				</button>
+			</li>
+			<li>
+				<button type="button" class="dropdown-item d-flex align-items-center" data-bs-theme-value="dark">
+					<i class="bi bi-moon-stars-fill me-2 opacity-50 theme-icon" data-icon="bi-moon-stars-fill"></i>
+					暗色
+				</button>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-item dropdown">
+		<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+			<i class="bi bi-translate"></i>
+			中文		</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a class="dropdown-item" href="?locale=zh-cn">
+					中文
+				</a>
+			</li>
+		</ul>
+	</li>
+	<li class="nav-item dropdown">
+		<a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false" id="uoj_username_a">
+			<span id="uoj_username_page"></span> 						</a>
+		<ul class="dropdown-menu">
+			<li>
+				<a class="dropdown-item" id="my_chat">个人信息</a>
+			</li>
+		</ul>
+	</li>
+					<li id="login" class="nav-item" role="presentation"><a class="nav-link" href="../ot.zyx.top/login.html">
+				<i class="bi bi-box-arrow-in-right"></i>
+				登录			</a>
+					<li id="logout" class="nav-item" role="presentation"><a class="nav-link" href="../ot.zyx.top/logout.html"><i class="bi bi-box-arrow-right"></i> 登出</a></li>
+								</ul><script type="text/javascript">
+							var uoj_username = localStorage.getItem("zyxOT-v3-username");
+							if (localStorage.getItem("zyxOT-v3-username") != null && localStorage.getItem("zyxOT-v3-user=" + localStorage.getItem("zyxOT-v3-username") + "?banned") == 1) {
+
+	uoj_username = null;
+}
+							if (uoj_username != null) {
+								document.querySelector("#uoj_username_page").innerHTML = uoj_username;
+								document.querySelector("#my_chat").href = "../ot.zyx.top/user.html?" + uoj_username;
+								document.querySelector("#login").remove();
+							}
+							else {
+								document.querySelector("#uoj_username_a").remove();
+								document.querySelector("#logout").remove();
+							}
+						</script>
+			</ul>
+		</div>
+
+	</div>
+</div>
+
+<script>
+	var zan_link = '';
+
+	var main_type = "xshift", topass = 1;
+</script>
+	
+	<div class="uoj-content container flex-fill">
+
+<div class="row">
+	<div class="col-sm-9 tab-content">
+
+<div class="tab-pane active" id="tab-main">
+	<div class="row">
+		<h1 id="main-type-text" class="col-sm-9"></h1>
+		<div class="col-sm-3" style="text-align: right;"><button type="button" class="btn btn-success" onclick="change_to();"><i class="bi bi-arrow-left-right"></i> 交换</button></div>
+	</div>
+	<style>
+		#left-text,
+		#right-text {
+			font-family: Menlo, Cascadia Mono, Ubuntu Mono, Roboto Mono, Jetbrains Mono, Fira Code, Consolas, '思源黑体 Regular', '思源宋体 Light', '宋体', 'Courier New', monospace;
+			width: 100%;
+			min-height: 300px;
+		}
+	</style>
+	<div class="card">
+		<div class="card-body">
+			<div class="row row-cols-1 row-cols-md-2">
+				<div class="col">
+					<textarea class="form-control" id="left-text" placeholder="明文"></textarea>
+				</div>
+				<div class="col">
+					<textarea data-no-autosize readonly class="form-control" id="right-text" placeholder="密文" style="height: 100%"></textarea>
+				</div>
+			</div>
+		</div>
+		<div class="card-footer bg-transparent text-end">
+			<a href="faq.html#main-goto" target="_blank">使用教程</a>
+		</div>
+<script>
+document.querySelector('#left-text').addEventListener('keydown', function(e) {
+ 	if (e.key == 'Tab') {
+		e.preventDefault();
+		let start = this.selectionStart;
+		let end = this.selectionEnd;
+		this.value = this.value.substring(0, start) + "\t" + this.value.substring(end);
+		this.selectionStart = this.selectionEnd = start + 1;
+	}
+});
+
+function getRandomUint32() {
+	const array = new Uint32Array(1);
+	crypto.getRandomValues(array);
+	return array[0];
+}
+
+function getRandomInt(min, max) {
+	min = Math.ceil(min);
+	max = Math.floor(max);
+	if (window.crypto && window.crypto.getRandomValues) {
+		const array = new Uint32Array(1);
+		window.crypto.getRandomValues(array);
+		return min + (array[0] % (max - min + 1));
+	} else {
+		return Math.floor(Math.random() * (max - min + 1)) + min;
+	}
+}
+
+function pow(x, y) {
+	let ret = 1, pw = x;
+	for (; y ; y = Math.floor(y / 2)){
+		if (y % 2 == 1) ret = ret * pw;
+		pw = pw * pw;
+	}
+	return ret;
+}
+
+function xorshift(x) {
+	const rd = getRandomInt(1, 10);
+
+	output += rd + ' ';
+	
+	for (let i = 0; i < rd; i++) {
+		x ^= x * pow(2, 15);
+		x >>>= 0;
+		x ^= Math.floor(x / pow(2, 17));
+		x >>>= 0;
+		x ^= x * pow(2, 3);
+		x >>>= 0;
+	}
+	
+	output += x + ' ';
+
+	return;
+}
+
+let s = 0n;
+const a = 21, b = 7, c = 15;
+const d = 0x9E3779B97F4A7C15n;
+const bigInt64 = 18446744073709551616n;
+function rnd() {
+	s ^= (s << BigInt(a)) % bigInt64;
+	s %= bigInt64;
+	s ^= (s >> BigInt(b)) % bigInt64;
+	s %= bigInt64;
+	s ^= (s << BigInt(c)) % bigInt64;
+	s %= bigInt64;
+	return s * d % bigInt64;
+}
+
+function go(type) {
+	output = '';
+	if (type == 'xshift') {
+		const s = document.getElementById('left-text').value;
+		let leng = s.length;
+		output += leng + '\n';
+		for (let i = 0; i < leng; i++) {
+			let x = s.charCodeAt(i);
+			for (let j = 0; j < 10; j++) {
+				x ^= x * pow(2, 15);
+				x >>>= 0;
+				x ^= Math.floor(x / pow(2, 17));
+				x >>>= 0;
+				x ^= x * pow(2, 3);
+				x >>>= 0;
+			}
+			output += x + ' ';
+		}
+	}
+	else if (type == 'LinearC') {
+		const s = document.getElementById('left-text').value;
+		let leng = s.length;
+		output += leng + '\n';
+		let a = [];
+		let c = [];
+		for (let i = 0; i < leng; i++) {
+			const charCode = s.charCodeAt(i);
+			const v = getRandomInt(1, 65536);
+			a.push(v);
+			const v2 = getRandomInt(1, 65536);
+			c.push(v2);
+			let transformed = (charCode * v + v2) % 65537;
+			output += transformed + ' ';
+		}
+		output += '\n';
+		for (const val of a) {
+			output += val + ' ';
+		}
+		output += '\n';
+		for (const val of c) {
+			output += val + ' ';
+		}
+	}
+	else if (type == 'LG&X') {
+		const s = document.getElementById('left-text').value;
+		let leng = s.length;
+		output += leng + '\n';
+		let a = [];
+		let c = [];
+		for (let i = 0; i < leng; i++) {
+			const charCode = s.charCodeAt(i);
+			const v = getRandomInt(1, 65536);
+			a.push(v);
+			const v2 = getRandomInt(1, 65536);
+			c.push(v2);
+			let transformed = (charCode * v + v2) % 65537;
+			xorshift(transformed);
+		}
+		output += '\n';
+		for (const val of a) {
+			xorshift(val);
+		}
+		output += '\n';
+		for (const val of c) {
+			xorshift(val);
+		}
+	}
+	else if (type == 'bitxor') {
+		s = 0n;
+		const mp = "0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ[]";
+		const inputText = document.getElementById('left-text').value;
+		const leng = inputText.length;
+		const high = (BigInt(getRandomUint32()) << 32n) % bigInt64;
+		const low = BigInt(getRandomUint32()) % bigInt64;
+		s = high | low;
+		output = s.toString(16) + ' ';
+		let cnt = -8;
+		let v = 0n;
+		let result = '';
+		let n = 0, i = 0;
+		do {
+			const x = inputText.charCodeAt(i);
+			i++;
+			n++;
+			v |= BigInt(x) << BigInt(cnt += 8);
+			v %= bigInt64;
+			if (cnt == 64 - 8) {
+				// alert(i);
+				v ^= rnd();
+				v %= bigInt64;
+				let buf = [];
+				let top = 0;
+				while (v > 0n) {
+					buf[++top] = mp[parseInt(v & 63n)];
+					v >>= 6n;
+				}
+				while (top > 0) {
+					result += buf[top--];
+				}
+				result += ' ';
+				cnt = -8;
+			}
+		} while (i < leng);
+		v ^= rnd();
+		v %= bigInt64;
+		let buf = [];
+		let top = 0;
+		while (v > 0n) {
+			buf[++top] = mp[parseInt(v & 63n)];
+			v >>= 6n;
+		}
+		while (top > 0) {
+			result += buf[top--];
+		}
+		output += n.toString(16) + '\n' + result;
+	}
+	document.getElementById('right-text').value = output;
+	return;
+}
+
+function quickpow(x, y) {
+	let ret = 1, pw = x;
+	for (; y ; y = Math.floor(y / 2)){
+		if (y % 2 == 1) ret = ret * pw % 65537;
+		pw = pw * pw % 65537;
+	}
+	return ret;
+}
+
+function qinv(x){
+	return quickpow(x, 65537 - 2);
+}
+
+function read(s, len, i) {
+	for (let j = i; j < len; j++) {
+		if (s[j] == ' ' || s[j] == '\n') {
+			return Number(s.substring(i, j));
+		}
+	}
+}
+function read_s(s, len, i) {
+	for (let j = i; j < len; j++) {
+		if (s[j] == ' ' || s[j] == '\n') {
+			return s.substring(i, j);
+		}
+	}
+}
+
+function getv(x, y) {
+	for (let j = 0; j < x; j++){
+		let v = y;
+		v >>>= 0;
+		// alert(pow(2, 31));
+		for (let i = 1;i < pow(2, 32);i *= 2){
+			v ^= ((v & i) << 3);
+			v >>>= 0;
+		}
+		for (let i = pow(2, 31);i > 0;i /= 2){
+			v ^= ((v & i) >>> 17);
+			v >>>= 0;
+		}
+		for (let i = 1;i < pow(2, 32);i *= 2){
+			v ^= ((v & i) << 15);
+			v >>>= 0;
+		}
+		y = v;
+	}
+	return y;
+}
+
+function back(type) {
+	let ans = '';
+	if (type == 'xshift') {
+		const t = document.getElementById('left-text').value + '\n';
+		let a = [];
+		let len = t.length, i = 0;
+		let n = read(t, len, i);
+		for (let j = i; j < len; j++) 
+			if (t[j] == ' ' && (t[j + 1] != '\n') || t[j] == '\n') {
+				i = j + 1;
+				break;
+			}
+		for (let k = 1; k <= n; k++) {
+			let x = 10, y;
+			y = read(t, len, i);
+			for (let j = i; j < len; j++) 
+				if (t[j] == ' ' && (t[j + 1] != '\n') || t[j] == '\n') {
+					i = j + 1;
+					break;
+				}
+			a.push(getv(x, y));
+		}
+		for (let i = 0; i < n; i++) 
+			ans += String.fromCharCode(a[i]);
+	}
+	else if (type == 'LinearC') {
+		const t = document.getElementById('left-text').value + '\n';
+		let a = [], c = [], s = [];
+		let len = t.length, i = 0;
+		let n = read(t, len, i);
+		for (let j = i; j < len; j++) 
+			if (t[j] == ' ' && (t[j + 1] != '\n') || t[j] == '\n') {
+				i = j + 1;
+				break;
+			}
+		for (let k = 1; k <= n; k++) {
+			let y;
+			y = read(t, len, i);
+			for (let j = i; j < len; j++) 
+				if (t[j] == ' ' && (t[j + 1] != '\n') || t[j] == '\n') {
+					i = j + 1;
+					break;
+				}
+			a.push(y);
+		}
+		for (let k = 1; k <= n; k++) {
+			let y;
+			y = read(t, len, i);
+			for (let j = i; j < len; j++) 
+				if (t[j] == ' ' && (t[j + 1] != '\n') || t[j] == '\n') {
+					i = j + 1;
+					break;
+				}
+			c.push(y);
+		}
+		for (let k = 1; k <= n; k++) {
+			let y;
+			y = read(t, len, i);
+			for (let j = i; j < len; j++) 
+				if (t[j] == ' ' && (t[j + 1] != '\n') || t[j] == '\n') {
+					i = j + 1;
+					break;
+				}
+			s.push(y);
+		}
+		for (let i = 0; i < n; i++) 
+			ans += String.fromCharCode((a[i] - s[i] + 65537) % 65537 * qinv(c[i]) % 65537);
+	}
+	else if (type == 'LG&X') {
+		const t = document.getElementById('left-text').value + '\n';
+		let a = [], c = [], s = [];
+		let len = t.length, i = 0;
+		let n = read(t, len, i);
+		for (let j = i; j < len; j++) 
+			if (t[j] == ' ' && (t[j + 1] != '\n') || t[j] == '\n') {
+				i = j + 1;
+				break;
+			}
+		for (let k = 1; k <= n; k++) {
+			let x, y;
+			x = read(t, len, i);
+			for (let j = i; j < len; j++) 
+				if (t[j] == ' ' && (t[j + 1] != '\n') || t[j] == '\n') {
+					i = j + 1;
+					break;
+				}
+			y = read(t, len, i);
+			for (let j = i; j < len; j++) 
+				if (t[j] == ' ' && (t[j + 1] != '\n') || t[j] == '\n') {
+					i = j + 1;
+					break;
+				}
+			a.push(getv(x, y));
+		}
+		for (let k = 1; k <= n; k++) {
+			let x, y;
+			x = read(t, len, i);
+			for (let j = i; j < len; j++) 
+				if (t[j] == ' ' && (t[j + 1] != '\n') || t[j] == '\n') {
+					i = j + 1;
+					break;
+				}
+			y = read(t, len, i);
+			for (let j = i; j < len; j++) 
+				if (t[j] == ' ' && (t[j + 1] != '\n') || t[j] == '\n') {
+					i = j + 1;
+					break;
+				}
+			c.push(getv(x, y));
+		}
+		for (let k = 1; k <= n; k++) {
+			let x, y;
+			x = read(t, len, i);
+			for (let j = i; j < len; j++) 
+				if (t[j] == ' ' && (t[j + 1] != '\n') || t[j] == '\n') {
+					i = j + 1;
+					break;
+				}
+			y = read(t, len, i);
+			for (let j = i; j < len; j++) 
+				if (t[j] == ' ' && (t[j + 1] != '\n') || t[j] == '\n') {
+					i = j + 1;
+					break;
+				}
+			s.push(getv(x, y));
+		}
+		for (let i = 0; i < n; i++) 
+			ans += String.fromCharCode((a[i] - s[i] + 65537) % 65537 * qinv(c[i]) % 65537);
+	}
+	else if (type == 'bitxor') {
+		s = 0n;
+		const gt = [-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,0n,1n,2n,3n,4n,5n,6n,7n,8n,9n,-1,-1,-1,-1,-1,-1,-1,36n,37n,38n,39n,40n,41n,42n,43n,44n,45n,46n,47n,48n,49n,50n,51n,52n,53n,54n,55n,56n,57n,58n,59n,60n,61n,62n,-1,63n,-1,-1,-1,10n,11n,12n,13n,14n,15n,16n,17n,18n,19n,20n,21n,22n,23n,24n,25n,26n,27n,28n,29n,30n,31n,32n,33n,34n,35n,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1,-1];
+		const t = document.getElementById('left-text').value;
+		const len = t.length;
+		let i = 0;
+		s = BigInt('0x' + read_s(t, len, i));
+		s = BigInt(s) % bigInt64;
+		for (let j = i; j < len; j++) 
+			if (t[j] == ' ' && (t[j + 1] != '\n') || t[j] == '\n') {
+				i = j + 1;
+				break;
+			}
+		let n = BigInt('0x' + read_s(t, len, i));
+		for (let j = i; j < len; j++) 
+			if (t[j] == ' ' && (t[j + 1] != '\n') || t[j] == '\n') {
+				i = j + 1;
+				break;
+			}
+		ans = '';
+		let v = 0, cnt = 8;
+		let ret = 0n, ch;
+		for (ch = t[i++]; gt[ch.charCodeAt(0)] == -1 && i <= len; ch = t[i++]);
+		let res = '';
+		for ( ; gt[ch.charCodeAt(0)] != -1 && i <= len; ch = t[i++]) {
+			ret <<= 6n;
+			ret %= bigInt64;
+			ret += gt[ch.charCodeAt(0)];
+			ret %= bigInt64;
+			if (i == len) 
+				break;
+		}
+		v = ret ^ rnd();
+		while (n--) {
+			if (!cnt) {
+				let ret = 0n, ch;
+				for (ch = t[i++]; gt[ch.charCodeAt(0)] == -1 && i <= len; ch = t[i++]);
+				for ( ; gt[ch.charCodeAt(0)] != -1 && i <= len; ch = t[i++]) {
+					ret <<= 6n;
+					ret %= bigInt64;
+					ret += gt[ch.charCodeAt(0)];
+					ret %= bigInt64;
+					if (i == len) 
+						break;
+				}
+				v = ret ^ rnd();
+				cnt = 8;
+			}
+			cnt--;
+			ans += String.fromCharCode(parseInt(v & 255n));
+			v >>= 8n;
+		}
+	}
+	document.getElementById('right-text').value = ans;
+	return;
+}
+
+var initialValue = "";
+document.getElementById('left-text').addEventListener('input', function(event) {
+	if (event.target.value !== initialValue) {
+		initialValue = event.target.value;
+		if (topass) {
+			localStorage.setItem("zyxOT-v3-main-1", Number(localStorage.getItem("zyxOT-v3-main-1")) + 1);
+			if (localStorage.getItem("zyxOT-v3-username") != null) 
+				localStorage.setItem("zyxOT-v3-user=" + localStorage.getItem("zyxOT-v3-username") + "?main-1", Number(localStorage.getItem("zyxOT-v3-user=" + localStorage.getItem("zyxOT-v3-username") + "?main-1")) + 1);
+			go(main_type);
+		}
+		else {
+			localStorage.setItem("zyxOT-v3-main-2", Number(localStorage.getItem("zyxOT-v3-main-2")) + 1);
+			if (localStorage.getItem("zyxOT-v3-username") != null) 
+				localStorage.setItem("zyxOT-v3-user=" + localStorage.getItem("zyxOT-v3-username") + "?main-2", Number(localStorage.getItem("zyxOT-v3-user=" + localStorage.getItem("zyxOT-v3-username") + "?main-2")) + 1);
+			back(main_type);
+		}
+	}
+});
+
+</script>
+	</div>
+</div>
+
+		</div>
+	<div class="col mt-3 mt-lg-0">
+				<div class="card card-default mb-2">
+			<div class="card-header fw-bold">
+				<i class="bi bi-bar-chart"></i> 操作
+			</div>
+			<div class="card-body">
+				<div class="list-group">								
+					<a href="javascript:xshift()" class="active list-group-item list-group-item-action" id="button-xshift">
+		xshift
+	</a><a href="javascript:LinearC()" class="list-group-item list-group-item-action" id="button-LinearC">
+		LinearC
+	</a><a href="javascript:LGandX()" class="list-group-item list-group-item-action" id="button-LGandX">
+		LG&X
+	</a><a href="javascript:bitxor()" class="list-group-item list-group-item-action" id="button-bitxor">
+		bitxor (不支持中文)
+	</a><script id="other_js">
+		let cnt = 1;
+		for (let i = localStorage.getItem('zyxOT-v3-toushi?id'); i && cnt <= 5; i--) 
+			if (localStorage.getItem('zyxOT-v3-toushi?id=' + i) != null && localStorage.getItem('zyxOT-v3-toushi?id=' + i + '&user') == "加密系统官方" && localStorage.getItem('zyxOT-v3-toushi?id=' + i + '&public') != null) {
+				cnt++;
+				document.write(`<a href="user/toushi.html?` + i + `" class="list-group-item list-group-item-action">
+		` + localStorage.getItem('zyxOT-v3-toushi?id=' + i) + `
+	</a>`);
+			}
+	</script><a href="system-toushi.html" class="list-group-item list-group-item-action">
+		查看公开
+	</a><a href="system-toushi.html?type=all" class="list-group-item list-group-item-action">
+		查看全部
+	</a></div>
+	<script>
+	document.querySelector("#other_js").remove();
+	if (localStorage.getItem("zyxOT-v3-username") == null) {
+		if (localStorage.getItem("zyxOT-v3-guest-see_domain") == "true" || localStorage.getItem("zyxOT-v3-guest-manage") == "true") {
+			document.write('<div class="mt-3 list-group">');
+			if (localStorage.getItem("zyxOT-v3-guest-manage") == "true") 
+				document.write('<a href="manage.html?script" class="list-group-item list-group-item-action" id="button-goto">				脚本			</a>');
+			if (localStorage.getItem("zyxOT-v3-guest-see_domain") == "true") 
+				document.write('<a href="domain.html?status" class="list-group-item list-group-item-action" id="button-goto">				管理			</a>');
+			document.write('</div>');
+		}
+	}
+	else {
+		if (localStorage.getItem("zyxOT-v3-user=" + localStorage.getItem("zyxOT-v3-username") + "?manage") == 1 || localStorage.getItem("zyxOT-v3-default-see_domain") == "true" || localStorage.getItem("zyxOT-v3-default-manage") == "true") {
+			document.write('<div class="mt-3 list-group">');
+			if (localStorage.getItem("zyxOT-v3-user=" + localStorage.getItem("zyxOT-v3-username") + "?manage") == 1 || localStorage.getItem("zyxOT-v3-default-manage") == "true") 
+				document.write('<a href="manage.html?script" class="list-group-item list-group-item-action" id="button-goto">				脚本			</a>');
+			if (localStorage.getItem("zyxOT-v3-user=" + localStorage.getItem("zyxOT-v3-username") + "?manage") == 1 || localStorage.getItem("zyxOT-v3-default-see_domain") == "true") 
+				document.write('<a href="domain.html?status" class="list-group-item list-group-item-action" id="button-goto">				管理			</a>');
+			document.write('</div>');
+		}
+	}
+	</script></div>
+	<script>
+function init() {
+	document.querySelector("#main-type-text").innerHTML = main_type;
+	if (topass) {
+		document.querySelector("#left-text").placeholder = "明文";
+		document.querySelector("#right-text").placeholder = "密文";
+		document.querySelector("#left-text").value = "";
+		document.querySelector("#right-text").value = "";
+	}
+	else {
+		document.querySelector("#left-text").placeholder = "密文";
+		document.querySelector("#right-text").placeholder = "明文";
+		document.querySelector("#left-text").value = "";
+		document.querySelector("#right-text").value = "";
+	}
+}
+
+init();
+
+function change_to() {
+	topass = 1 - topass;
+	init();
+}
+
+function xshift() {
+	$("#button-xshift").addClass('active');
+	$("#button-LinearC").removeClass('active');
+	$("#button-LGandX").removeClass('active');
+	$("#button-bitxor").removeClass('active');
+	main_type = "xshift";
+	init();
+}
+function LinearC() {
+	$("#button-xshift").removeClass('active');
+	$("#button-LinearC").addClass('active');
+	$("#button-LGandX").removeClass('active');
+	$("#button-bitxor").removeClass('active');
+	main_type = "LinearC";
+	init();
+}
+function LGandX() {
+	$("#button-xshift").removeClass('active');
+	$("#button-LinearC").removeClass('active');
+	$("#button-LGandX").addClass('active');
+	$("#button-bitxor").removeClass('active');
+	main_type = "LG&X";
+	init();
+}
+function bitxor() {
+	$("#button-xshift").removeClass('active');
+	$("#button-LinearC").removeClass('active');
+	$("#button-LGandX").removeClass('active');
+	$("#button-bitxor").addClass('active');
+	main_type = "bitxor";
+	init();
+}
+	</script>
+			</div>
+		</div>
+	</div>
+<div class="alert alert-danger mt-4">
+	<h4>注意</h4>
+	<p>本平台的所有算法都不具有安全性，请勿用于情报战等关键场景，如果因为加密问题引发情报泄露，本平台概不负责。</p>
+	<p>All algorithms on this platform are not secure and should not be used in critical scenarios such as intelligence warfare. If intelligence leakage occurs due to encryption issues, this platform is not responsible.</p>
+	<p>Все алгоритмы Платформы не являются безопасными и не должны использоваться в критических сценариях, таких как разведывательные войны, и Платформа не несет ответственности за утечку информации из - за проблем с шифрованием.</p>
+	<p>当プラットフォームのすべてのアルゴリズムは安全性を持っていないので、情報戦などの重要なシーンには使用しないでください。暗号化問題で情報漏洩が発生した場合、当プラットフォームは一切責任を負いません。</p>
+</div>
+</div>
+
+
+	<script>
+	if (localStorage.getItem("zyxOT-v3-username") == null && localStorage.getItem("zyxOT-v3-guest-translation") != "true") {
+		document.querySelector("title").innerHTML = "403 - 在线加密系统";
+		document.querySelector(".uoj-content").innerHTML = '<div class="text-center"><div style="font-size:233px">403</div><p>禁止入内！ T_T</p></div>			';
+	}
+	else if (localStorage.getItem("zyxOT-v3-username") != null && localStorage.getItem("zyxOT-v3-user=" + localStorage.getItem("zyxOT-v3-username") + "?manage") != 1 && localStorage.getItem("zyxOT-v3-default-translation") != "true") {
+		document.querySelector("title").innerHTML = "403 - 在线加密系统";
+		document.querySelector(".uoj-content").innerHTML = '<div class="text-center"><div style="font-size:233px">403</div><p>禁止入内！ T_T</p></div>			';
+	}
+	</script>
+</div>
+	<footer class="bg-body text-muted pt-3 pb-4 mt-4" style="font-size: 0.9em">
+		<div class="container d-lg-flex justify-content-lg-between">
+			<div>
+				<div>
+					&copy; 2025					<a class="text-decoration-none" href="../ot.zyx.top.html">zyxOT</a>
+				</div>
+				<div class="small mt-1" id="web-time">
+					服务器时间: 2025-08-23 14:00:45				</div>
+			</div>
+			<div class="mt-2 mt-lg-0">
+				Based on <a class="text-decoration-none" href="https://uoj.ac" target="_blank">UOJ</a> &
+				<a class="text-decoration-none" href="https://sjzezoj.com" target="_blank">S2OJ</a>,
+				modified by <a class="text-decoration-none" href="../ot.zyx.top/user.html?zyx2012" target="_blank">zyx2012</a> & <a class="text-decoration-none" href="../ot.zyx.top/user.html?Hussein" target="_blank">Hussein</a>
+				for <a class="text-decoration-none" href="../ot.zyx.top.html" target="_blank">zyxOT</a>
+			</div>
+		</div>
+		<script src="../ot.zyx.top/js/system.js"></script>
+	</footer>
+</div>
+<!-- /container -->
+</body>
+
+</html>

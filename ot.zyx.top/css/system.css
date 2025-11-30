@@ -1,0 +1,70 @@
+input[type="checkbox"] {
+	appearance: none;
+	cursor: pointer;
+	border-radius: 1px;
+	border: 1px solid #d0d0d0;
+	background-color: none;
+	width: 1rem;
+	height: 1rem;
+	transition: background-color 0.2s;
+	margin: .06874999999999998rem .3125rem .06874999999999998rem 0;
+	vertical-align: middle;
+}
+input[type="checkbox"]:hover {
+	border-color: #f28fa7;
+}
+input[type="checkbox"]:checked {
+	content: '';
+	border-color: #ed5f82;
+	background-color: #ed5f82;
+	text-align: center;
+	font-size: 16px;
+	color: "#fff";
+}
+input[type="checkbox"]:checked::after {
+	opacity: 1;
+	transform: rotate(-45deg);
+	content: "";
+	width: .700rem;
+	height: .400rem;
+	position: absolute;
+	margin-top: .150rem;
+	margin-left: -.3275rem;
+	border: 2px solid #fff;
+	border-top: none;
+	border-right: none;
+	background: transparent;
+}
+.form-switch input[type="checkbox"]:checked::after {
+	border-color: rgba(0, 0, 0, 0);
+}
+input[disabled] {
+	border: 1px solid #e7e7e7;
+	cursor: not-allowed;
+}
+input[disabled]:hover {
+	border-color: #e7e7e7;
+}
+input[type="checkbox"]:checked:disabled {
+	content: '';
+	border-color: #f28fa7;
+	background-color: #f28fa7;
+	text-align: center;
+	font-size: 16px;
+	color: "#fff";
+}
+
+body, .uoj-username, .uoj-score {
+	font-family: "Open Sans", "Open Sans", "Seravek", "Segoe UI", "Verdana", "PingFang SC", "Hiragino Sans GB", "Lantinghei SC", "Microsoft Yahei", "WenQuanYi Micro Hei", "sans";
+}
+
+.checkbox {
+	display: block;
+	margin: 0;
+	padding-left: 10px;
+	cursor: pointer;
+	user-select: none;
+	font-size: .875rem;
+	line-height: 1.8;
+	color: #666;
+}
